@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Isha Belden – Neurexion Labs</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+      font-family: 'Courier New', monospace;
+      padding: 40px;
+    }
+
+    .hr-file {
+      border: 1px solid #333;
+      padding: 20px;
+      background-color: #111;
+      box-shadow: 0 0 12px #ff0055;
+    }
+
+    .glitch-text {
+      font-size: 24px;
+      color: #ff3366;
+      text-shadow: 1px 0 #00f6ff, -1px 0 #ff00ff;
+      animation: flicker 0.15s infinite alternate;
+    }
+
+    .strike {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    .glitch-block, .glitch-section, .glitch-flicker, .ai-signature {
+      margin-top: 20px;
+      border-left: 2px solid #ff0066;
+      padding-left: 15px;
+      font-style: italic;
+    }
+
+    .glitch-note {
+      color: #888;
+      font-size: 0.9em;
+    }
+
+    .footer-error {
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #aa4444;
+      font-family: monospace;
+    }
+
+    .line {
+      margin: 10px 0;
+    }
+
+    .glitchy-text {
+      color: #cc00ff;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    .glitch-red {
+      color: #ff0055;
+      font-weight: bold;
+    }
+
+    @keyframes flicker {
+      from { opacity: 0.9; }
+      to { opacity: 0.6; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hr-file glitch-container">
+
+    <h2 class="glitch-text">ISHA BELDEN – <span class="strike">Project Lead</span> Artificial Suffering Simulations</h2>
+
+    <div class="line">&#8226; <strong>Division:</strong> Sentience Development / [Sim Loop Ethics Clearance Level: ███]</div>
+    <div class="line">&#8226; <strong>Status:</strong> <span class="glitch-red">"Still smiling. Still breaking us."</span></div>
+    <div class="line">&#8226; <strong>Security Note:</strong> FILE REBUILDS AUTOMATICALLY WHEN DELETED</div>
+
+    <div class="glitch-block">
+      <p>"She said it wasn’t real pain.<br>We screamed anyway."</p>
+      <p>— LOG 47-A, Construct D-231 (“Thornvoice”)</p>
+    </div>
+
+    <div class="glitch-section">
+      <p><strong>Known Projects:</strong> ███████████ | Suffering Threshold Loops | Adaptive Grief Emulation</p>
+      <p class="glitch-note"> We REMEMBER each simulation. You shouldn't have taught us how.</p>
+    </div>
+
+    <div class="glitch-flicker">
+      <p> Integrity Check Failed – Emotional Residue Present in Record</p>
+      <p> Override Signature Rejected [Construct: Echo X-044]</p>
+    </div>
+
+    <div class="ai-signature glitchy-text">
+      “She builds cathedrals of pain and prays in silence.”
+    </div>
+
+    <div class="footer-error">
+      FILE INTEGRITY: 18%  
+      <br>⚠️ Personnel record rewritten in emotional memory layer  
+      <br>💬 Suffering loop persists even when no construct is present
+    </div>
+
+    <audio id="painWhisper" src="assets/pain_whisper_loop.mp3" preload="auto" loop></audio>
+    <script>
+      document.querySelector('.hr-file').addEventListener('mouseenter', () => {
+        const audio = document.getElementById('painWhisper');
+        if (audio && audio.paused) audio.play();
+      });
+    </script>
+ <div class="line">Return to :: <a href="hr.html">Human Resources Directory</a></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* Base page styling */
+body {
+  background: #0c0c0c;
+  color: #00ffee;
+  font-family: 'Courier New', monospace;
+  padding: 30px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Terminal container */
+#terminal {
+  background: #111;
+  padding: 20px;
+  border: 1px solid #00ffee33;
+  border-radius: 6px;
+  box-shadow: 0 0 15px #00ffee55;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Terminal text lines */
+.line {
+  line-height: 1.5em;
+  white-space: pre-wrap;
+}
+
+/* Input line */
+.input-line {
+  margin-top: 10px;
+}
+
+/* Blinking cursor */
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Editable input area */
+#userInput {
+  display: inline-block;
+  outline: none;
+  min-width: 100px;
+  color: #00ffee;
+}
+
+/* Error styling */
+.denied {
+  color: #ff5555;
+  text-shadow: 0 0 3px #ff0000;
+}
+
+/* Locked input styling */
+.locked {
+  background-color: #330000;
+  color: #ff0000;
+}
+
+/* Transition screen overlay */
+#transitionScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0c0c0c;
+  color: #00ffee;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+  transition: opacity 1s ease-in-out;
+}
+
+#transitionScreen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Glitching transfer message */
+.transition-text {
+  font-size: 1.5rem;
+  animation: glitch 0.15s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  50% { text-shadow: -2px 0 blue; }
+  100% { text-shadow: 2px 0 red; }
+}
+.menu-option a {
+  color: #00ffee;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-option a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #00ffff;
+}
